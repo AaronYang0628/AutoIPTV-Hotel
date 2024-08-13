@@ -1,4 +1,4 @@
-name: update-lives-list
+name: update-live-m3u
 
 on:
   schedule:
@@ -12,27 +12,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: checkout code
         uses: actions/checkout@v2
     
-      - name: Set up Python
+      - name: set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
 
-      - name: Install dependencies
+      - name: install dependencies
         run: pip install selenium requests futures eventlet
 
-      - name: Run iptv
-        run: python ${{ github.workspace }}/iptv.py
+      - name: update live m3u files
+        run: python ${{ github.workspace }}/live.py
+      
+      - name: update cctv sample m3u files
+        run: python ${{ github.workspace }}/cctv.py
 
         
-      - name: 提交
+      - name: submit
         run: |
-          git config --local user.email "ssili@126.com"
-          git config --local user.name "ssili126"
+          git config --local user.email "byang628@alumni.usc.edu"
+          git config --local user.name "AaronYang"
           git add .
-          git commit *.txt -m "Add generated file"
-          git commit *.m3u -m "Add generated file"
-          #git pull --rebase
+          git commit *.txt -m "update txt links"
+          git commit *.m3u -m "update m3u links"
           git push -f
