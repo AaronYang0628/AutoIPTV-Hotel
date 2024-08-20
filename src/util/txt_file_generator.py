@@ -1,7 +1,7 @@
-from file_generator import FileGenerator
+import file_generator
 
 
-class TXTFileGenerator(FileGenerator):
+class TXTFileGenerator(file_generator.FileGenerator):
 
     def _content_header_template(self) -> str:
         return ""
