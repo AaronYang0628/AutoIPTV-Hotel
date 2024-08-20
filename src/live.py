@@ -270,5 +270,5 @@ results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
 
 M3UFileGenerator().export(results, "lives.m3u")
-TXTFileGenerator().export(results, "lives.m3u")
+TXTFileGenerator().export(results, "lives.txt")
 

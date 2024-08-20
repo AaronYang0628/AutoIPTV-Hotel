@@ -2,7 +2,7 @@ name: update-live-m3u
 
 on:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 16 * * *'
   push:
     branches:
       - main
