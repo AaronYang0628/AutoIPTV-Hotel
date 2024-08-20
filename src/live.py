@@ -9,8 +9,8 @@ import threading
 from queue import Queue
 import eventlet
 
-from src.util.m3u_file_generator import M3UFileGenerator
-from src.util.txt_file_generator import TXTFileGenerator
+from util.m3u_file_generator import M3UFileGenerator
+from util.txt_file_generator import TXTFileGenerator
 
 eventlet.monkey_patch()
 
