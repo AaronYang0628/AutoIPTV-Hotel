@@ -1,4 +1,4 @@
-from src.util.file_generator import FileGenerator
+from file_generator import FileGenerator
 
 
 class M3UFileGenerator(FileGenerator):
