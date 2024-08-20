@@ -1,7 +1,7 @@
-import file_generator
+from .file_generator import FileGenerator
 
 
-class M3UFileGenerator(file_generator.FileGenerator):
+class M3UFileGenerator(FileGenerator):
 
     def _content_header_template(self) -> str:
         return '#EXTM3U\n'
