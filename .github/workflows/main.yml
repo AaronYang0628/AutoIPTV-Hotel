@@ -35,6 +35,5 @@ jobs:
           git config --local user.email "byang628@alumni.usc.edu"
           git config --local user.name "AaronYang"
           git add .
-          git commit *.txt -m "update txt links"
           git commit *.m3u -m "update m3u links"
           git push -f
