@@ -90,8 +90,7 @@ for url in urls:
         futures = []
         for url in urls:
             url = url.strip()
-            modified_urls = modify_urls(url)
-            for modified_url in modified_urls:
+            for modified_url in modify_urls(url):
                 futures.append(executor.submit(is_url_accessible, modified_url))
 
         for future in concurrent.futures.as_completed(futures):

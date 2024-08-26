@@ -29,6 +29,10 @@ jobs:
       - name: update cctv sample m3u files
         run: python ${{ github.workspace }}/src/cctv.py
 
+      - name: force sync gitee
+        run: |
+          curl 'https://gitee.com/aaron2333/auto-iptv/force_sync_project' \
+          --data-raw 'authenticity_token=7HgAMMsF0E%2F%2FNYoTtwePoL4aoVbqvI3cvK1EX7vVqwYCJi6BekMz8%2Bxpkdtt18fnkS4OM6CFQuODHAmrrO2zSQ%3D%3D'
         
       - name: submit
         run: |
