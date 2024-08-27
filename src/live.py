@@ -106,5 +106,5 @@ task_queue.join()
 
 content_lines.sort(key=lambda x: (x[0], float(x[2])))
 
-M3UFileGenerator(candidate_count=8).export(results, "lives.m3u")
-SampleFileGenerator(candidate_count=2).export(results, "cctv.m3u")
+M3UFileGenerator(candidate_count=8).export(content_lines, "lives.m3u")
+SampleFileGenerator(candidate_count=2).export(content_lines, "cctv.m3u")
