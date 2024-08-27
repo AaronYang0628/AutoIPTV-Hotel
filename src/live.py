@@ -104,7 +104,7 @@ for _ in range(10):
 task_queue.join()
 
 
-content_lines.sort(key=lambda x: (x[0], float(x[2])))
+content_lines.sort(key=lambda x: (float(re.findall(r'\d+', x[0])[0]) if re.search(r'\d+', x[0]) else float("inf"), float(x[2])))
 
 M3UFileGenerator(candidate_count=8).export(content_lines, "lives.m3u")
-SampleFileGenerator(candidate_count=2).export(content_lines, "cctv.m3u")
+SampleFileGenerator(candidate_count=1).export(content_lines, "cctv.m3u")
