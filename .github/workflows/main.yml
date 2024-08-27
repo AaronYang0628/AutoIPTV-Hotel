@@ -25,9 +25,6 @@ jobs:
 
       - name: update live m3u files
         run: python ${{ github.workspace }}/src/live.py
-      
-      - name: update cctv sample m3u files
-        run: python ${{ github.workspace }}/src/cctv.py
 
       - name: force sync gitee
         run: |
